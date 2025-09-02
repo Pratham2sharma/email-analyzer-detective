@@ -31,8 +31,8 @@ export default function HomePage() {
         );
         setTargetInfo(response.data);
         setIsChecking(true);
-      } catch (err) {
-        console.error("Failed to fetch target info:", err);
+      } catch (_err) {
+        console.error("Failed to fetch target info:", _err);
         setError(
           "Could not connect to the backend. Please ensure it is running."
         );
@@ -56,7 +56,7 @@ export default function HomePage() {
           setResults(response.data);
           setIsChecking(false);
         }
-      } catch (err) {
+      } catch (_err) {
         console.log("Automatic Check: Results not ready yet.");
       }
     }, 5000); // Checks every 5 seconds.
@@ -78,8 +78,8 @@ export default function HomePage() {
         setResults(response.data);
         setIsChecking(false);
       }
-    } catch (err) {
-      console.error("Failed to create test data:", err);
+    } catch (_err) {
+      console.error("Failed to create test data:", _err);
     } finally {
       setIsCreatingTest(false);
     }
@@ -92,7 +92,8 @@ export default function HomePage() {
           Email Analyzer
         </h1>
         <p className="text-center text-gray-500 mb-12">
-          Follow the instructions below to analyze an email's delivery path.
+          Follow the instructions below to analyze an email&apos;s delivery
+          path.
         </p>
 
         {/* Instructions Card */}
@@ -149,7 +150,7 @@ export default function HomePage() {
               {/* ESP Type Display */}
               <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
                 <h3 className="text-lg font-semibold text-blue-800 mb-2">
-                  Sender's ESP
+                  Sender&apos;s ESP
                 </h3>
                 <p className="text-3xl font-bold text-blue-900">
                   {results.esp}
