@@ -27,7 +27,7 @@ export default function HomePage() {
     const fetchTargetInfo = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3001/email/target-info"
+          `${process.env.NEXT_PUBLIC_API_URL}/email/target-info`
         );
         setTargetInfo(response.data);
         setIsChecking(true);
@@ -49,7 +49,7 @@ export default function HomePage() {
     const intervalId = setInterval(async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/email/results/${targetInfo.subject}`
+          `${process.env.NEXT_PUBLIC_API_URL}/email/results/${targetInfo.subject}`
         );
 
         if (response.status === 200) {
@@ -67,11 +67,13 @@ export default function HomePage() {
   const createTestData = async () => {
     setIsCreatingTest(true);
     try {
-      await axios.get("http://localhost:3001/email/create-test-data");
+      await axios.get(
+        `${process.env.NEXT_PUBLIC_API_URL}/email/create-test-data`
+      );
       // Trigger a check for results
       if (targetInfo?.subject) {
         const response = await axios.get(
-          `http://localhost:3001/email/results/${targetInfo.subject}`
+          `${process.env.NEXT_PUBLIC_API_URL}/email/results/${targetInfo.subject}`
         );
         setResults(response.data);
         setIsChecking(false);
