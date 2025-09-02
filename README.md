@@ -1,6 +1,6 @@
 # Email Header Analyzer
 
-]A full-stack application that can automatically identify the receiving chain and the ESP (Email Service Provider) type of any email sent to it using IMAP.This project provides a responsive user interface and a structured backend to analyze the hidden data within email headers[cite: 4, 11].
+A full-stack application that can automatically identify the receiving chain and the ESP (Email Service Provider) type of any email sent to it using IMAP.This project provides a responsive user interface and a structured backend to analyze the hidden data within email headers.
 
 ---
 
@@ -11,10 +11,10 @@ Live Link - https://email-analyzer-detective.vercel.app/
 
 ## Features
 
-* [cite_start]**Automatic Email Processing**: Automatically detects and processes incoming emails via a scheduled IMAP connection.
-* [cite_start]**Receiving Chain Analysis**: Extracts the email's full receiving chain, showing the path it traveled across servers.
-* [cite_start]**ESP Detection**: Identifies the sender's Email Service Provider (e.g., Gmail, Outlook, Amazon SES) from the email headers.
-* [cite_start]**User-Friendly Dashboard**: Presents the complex analysis results in a clean, responsive, and intuitive timeline format.
+* **Automatic Email Processing**: Automatically detects and processes incoming emails via a scheduled IMAP connection.
+* **Receiving Chain Analysis**: Extracts the email's full receiving chain, showing the path it traveled across servers.
+* **ESP Detection**: Identifies the sender's Email Service Provider (e.g., Gmail, Outlook, Amazon SES) from the email headers.
+* **User-Friendly Dashboard**: Presents the complex analysis results in a clean, responsive, and intuitive timeline format.
 
 ---
 
